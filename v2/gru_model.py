@@ -13,4 +13,5 @@ class SignGRU(nn.Module):
         if x.ndim != 3 or x.shape[-1] != self.gru.input_size:
             raise ValueError('Expected (batch,frames,features)')
         out, _ = self.gru(x)
+        print('Helloe')
         return self.head(out[:, -1])
