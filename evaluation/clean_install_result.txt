@@ -1,0 +1,2 @@
+Reproduced holdout: 97.46% (115/118)
+Same-source samples only. No signer/session IDs: unseen-signer and live-camera accuracy are not established.

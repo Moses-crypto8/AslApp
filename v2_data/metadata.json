@@ -1,0 +1,32 @@
+{
+  "samples": 589,
+  "classes": [
+    "I love you",
+    "about",
+    "again",
+    "ask",
+    "bad",
+    "bullshit",
+    "hello",
+    "help",
+    "hi, how are you?",
+    "learn",
+    "love",
+    "please",
+    "sign language",
+    "sorry",
+    "thank you",
+    "welcome",
+    "what"
+  ],
+  "frames": 15,
+  "features_per_frame": 88,
+  "source": "sign_language.csv",
+  "source_type": "legacy_v1",
+  "signer_ids_available": false,
+  "evaluation_warning": "Signer-independent validation impossible without signer/session metadata. Do not interpret random-split accuracy as generalization.",
+  "limitations": [
+    "Original frame-wise absolute wrist motion is lost after centering.",
+    "Legacy data has no body or face landmarks."
+  ]
+}

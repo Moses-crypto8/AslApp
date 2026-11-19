@@ -1,0 +1,27 @@
+test_camera_failure_releases_resources (test_app.CameraTests.test_camera_failure_releases_resources) ... <frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+<frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+ok
+test_collector_sequence_and_csv (test_app.CameraTests.test_collector_sequence_and_csv) ... Saved 1 samples to /tmp/tmpni6_5atu/capture.csv
+ok
+test_real_detector_on_blank_image (test_app.CameraTests.test_real_detector_on_blank_image) ... INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1792277061.659308      40 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792277061.674740      40 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+ok
+test_recognizer_camera_loop (test_app.CameraTests.test_recognizer_camera_loop) ... ok
+test_database_update_and_validation (test_app.PipelineTests.test_database_update_and_validation) ... ok
+test_feature_roundtrip (test_app.PipelineTests.test_feature_roundtrip) ... ok
+test_gap_clears_sequence (test_app.PipelineTests.test_gap_clears_sequence) ... ok
+test_inference_matches_saved_model (test_app.PipelineTests.test_inference_matches_saved_model) ... ok
+test_insufficient_samples_have_clear_error (test_app.PipelineTests.test_insufficient_samples_have_clear_error) ... ok
+test_original_accuracy_and_disjoint_holdout (test_app.PipelineTests.test_original_accuracy_and_disjoint_holdout) ... ok
+test_reordered_schema_canonicalized (test_app.PipelineTests.test_reordered_schema_canonicalized) ... ok
+test_checkpoint_inference_reproduces_report (test_app.TemporalIntegration.test_checkpoint_inference_reproduces_report) ... skipped 'Optional PyTorch not installed'
+test_gru_v2 (unittest.loader.ModuleSkipped.test_gru_v2) ... skipped 'Optional PyTorch not installed'
+test_missing_hands (test_v2.TestV2.test_missing_hands) ... ok
+test_translation_invariance (test_v2.TestV2.test_translation_invariance) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.635s
+
+OK (skipped=2)

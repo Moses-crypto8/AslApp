@@ -1,0 +1,30 @@
+{
+  "method": "3-fold stratified CV on the 471 original training samples only; seed 123. Holdout excluded from selection.",
+  "candidates": {
+    "random_forest": {
+      "fold_accuracy": [
+        0.9681528662420382,
+        0.9617834394904459,
+        0.9808917197452229
+      ],
+      "mean_accuracy": 0.970276008492569
+    },
+    "extra_trees": {
+      "fold_accuracy": [
+        0.9808917197452229,
+        0.9745222929936306,
+        0.9872611464968153
+      ],
+      "mean_accuracy": 0.9808917197452228
+    },
+    "svm": {
+      "fold_accuracy": [
+        0.9426751592356688,
+        0.9490445859872612,
+        0.9235668789808917
+      ],
+      "mean_accuracy": 0.9384288747346071
+    }
+  },
+  "selected": "extra_trees"
+}

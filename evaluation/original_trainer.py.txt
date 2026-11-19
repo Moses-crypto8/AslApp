@@ -1,0 +1,70 @@
+from __future__ import annotations
+
+from pathlib import Path
+import json
+import joblib
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+from database import load_database, LABEL_COL
+from features import dataframe_to_xy
+
+
+def train_model(database_csv: str | Path, model_path: str | Path = "models/asl_model.joblib") -> dict:
+    """Train and save the ASL word classifier."""
+    database_csv = Path(database_csv)
+    model_path = Path(model_path)
+    model_path.parent.mkdir(parents=True, exist_ok=True)
+
+    df = load_database(database_csv)
+    X, y = dataframe_to_xy(df)
+
+    # Stratify only when every class has at least two samples.
+    value_counts = y.value_counts()
+    stratify = y if value_counts.min() >= 2 else None
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=stratify
+    )
+
+    model = RandomForestClassifier(
+        n_estimators=200,
+        random_state=42,
+        class_weight="balanced"
+    )
+    model.fit(X_train, y_train)
+
+    predictions = model.predict(X_test)
+    accuracy = accuracy_score(y_test, predictions)
+
+    payload = {
+        "model": model,
+        "feature_columns": list(X.columns),
+        "classes": sorted(map(str, model.classes_.tolist())),
+    }
+    joblib.dump(payload, model_path)
+
+    metadata = {
+        "database_csv": str(database_csv),
+        "model_path": str(model_path),
+        "rows": int(len(df)),
+        "terms": int(y.nunique()),
+        "accuracy": float(accuracy),
+        "classes": payload["classes"],
+    }
+
+    with open(model_path.with_suffix(".json"), "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=2)
+
+    return metadata
+
+
+def load_model(model_path: str | Path):
+    """Load a saved model package."""
+    model_path = Path(model_path)
+    if not model_path.exists():
+        raise FileNotFoundError(
+            f"Model not found: {model_path}. Run: python app.py train"
+        )
+    return joblib.load(model_path)

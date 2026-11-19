@@ -1,0 +1,57 @@
+test_camera_failure_releases_resources (test_app.CameraTests.test_camera_failure_releases_resources) ... <frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+<frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+ok
+test_collector_sequence_and_csv (test_app.CameraTests.test_collector_sequence_and_csv) ... Captured 0.70s / 15 frames
+Saved 1 complete recordings to /tmp/tmp7xl5yj83/capture.csv (raw frames retained alongside CSV)
+ok
+test_real_detector_on_blank_image (test_app.CameraTests.test_real_detector_on_blank_image) ... INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1792343562.785726      42 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792343562.804030      42 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+ok
+test_recognizer_camera_loop (test_app.CameraTests.test_recognizer_camera_loop) ... ok
+test_database_update_and_validation (test_app.PipelineTests.test_database_update_and_validation) ... ok
+test_feature_roundtrip (test_app.PipelineTests.test_feature_roundtrip) ... ok
+test_gap_clears_sequence (test_app.PipelineTests.test_gap_clears_sequence) ... ok
+test_inference_matches_saved_model (test_app.PipelineTests.test_inference_matches_saved_model) ... ok
+test_insufficient_samples_have_clear_error (test_app.PipelineTests.test_insufficient_samples_have_clear_error) ... ok
+test_original_accuracy_and_disjoint_holdout (test_app.PipelineTests.test_original_accuracy_and_disjoint_holdout) ... ok
+test_reordered_schema_canonicalized (test_app.PipelineTests.test_reordered_schema_canonicalized) ... ok
+test_checkpoint_inference_reproduces_report (test_app.TemporalIntegration.test_checkpoint_inference_reproduces_report) ... skipped 'Optional PyTorch not installed'
+test_gru_v2 (unittest.loader.ModuleSkipped.test_gru_v2) ... skipped 'Optional PyTorch not installed'
+test_degenerate_and_empty_inputs (test_normalization.NormalizationTests.test_degenerate_and_empty_inputs) ... ok
+test_full_holdout_prediction_consistency (test_normalization.NormalizationTests.test_full_holdout_prediction_consistency) ... ok
+test_motion_path_is_retained (test_normalization.NormalizationTests.test_motion_path_is_retained) ... ok
+test_random_translation_and_uniform_scale_invariance (test_normalization.NormalizationTests.test_random_translation_and_uniform_scale_invariance) ... ok
+test_relative_hand_position_is_retained (test_normalization.NormalizationTests.test_relative_hand_position_is_retained) ... ok
+test_settings_are_forwarded_to_both_camera_actions (test_segmentation.DesktopSettingsTests.test_settings_are_forwarded_to_both_camera_actions) ... ok
+test_manual_recognizer_classifies_once_after_finish (test_segmentation.LiveBoundaryTests.test_manual_recognizer_classifies_once_after_finish) ... phrase (90%) | 3.00s / 91 frames
+ok
+test_auto_movement_then_pause (test_segmentation.SegmentTests.test_auto_movement_then_pause) ... ok
+test_automatic_static_arrival_finishes_once (test_segmentation.SegmentTests.test_automatic_static_arrival_finishes_once) ... ok
+test_invalid_timing_and_settings (test_segmentation.SegmentTests.test_invalid_timing_and_settings) ... ok
+test_long_tracking_gap_discards (test_segmentation.SegmentTests.test_long_tracking_gap_discards) ... ok
+test_manual_complete_phrase_not_15_frame_chunks (test_segmentation.SegmentTests.test_manual_complete_phrase_not_15_frame_chunks) ... ok
+test_manual_static_sign_can_finish (test_segmentation.SegmentTests.test_manual_static_sign_can_finish) ... ok
+test_missing_hand_not_interpolated_into_fake_hand (test_segmentation.SegmentTests.test_missing_hand_not_interpolated_into_fake_hand) ... ok
+test_raw_archive_keeps_duration_and_all_frames (test_segmentation.SegmentTests.test_raw_archive_keeps_duration_and_all_frames) ... ok
+test_return_after_long_gap_does_not_stitch (test_segmentation.SegmentTests.test_return_after_long_gap_does_not_stitch) ... ok
+test_small_tracking_gap_tolerated (test_segmentation.SegmentTests.test_small_tracking_gap_tolerated) ... ok
+test_temporal_sampling_uses_elapsed_time (test_segmentation.SegmentTests.test_temporal_sampling_uses_elapsed_time) ... ok
+test_timeout_and_cancel (test_segmentation.SegmentTests.test_timeout_and_cancel) ... ok
+test_too_short_rejected (test_segmentation.SegmentTests.test_too_short_rejected) ... ok
+test_space_and_enter_finish_after_hands_leave_camera (test_segmentation.StopCameraRegression.test_space_and_enter_finish_after_hands_leave_camera) ... phrase (90%) | 1.00s / 21 frames
+phrase (90%) | 1.00s / 21 frames
+ok
+test_finish_without_hands_uses_completed_frames (test_segmentation.StopRegressionTests.test_finish_without_hands_uses_completed_frames) ... ok
+test_manual_long_gap_preserves_buffer_for_stop (test_segmentation.StopRegressionTests.test_manual_long_gap_preserves_buffer_for_stop) ... ok
+test_returning_hands_do_not_stitch_manual_gap (test_segmentation.StopRegressionTests.test_returning_hands_do_not_stitch_manual_gap) ... ok
+test_stop_too_short_still_leaves_recording_mode (test_segmentation.StopRegressionTests.test_stop_too_short_still_leaves_recording_mode) ... ok
+test_timeout_without_hands_finishes_buffer (test_segmentation.StopRegressionTests.test_timeout_without_hands_finishes_buffer) ... ok
+test_missing_hands (test_v2.TestV2.test_missing_hands) ... ok
+test_translation_invariance (test_v2.TestV2.test_translation_invariance) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 2.404s
+
+OK (skipped=2)

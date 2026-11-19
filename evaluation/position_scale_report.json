@@ -1,0 +1,120 @@
+{
+  "samples": 118,
+  "evaluation": "Synthetic landmark transforms of the same legacy holdout; not camera images or unseen signers.",
+  "cases": [
+    {
+      "name": "unchanged",
+      "scale": 1.0,
+      "offset": [
+        0,
+        0
+      ],
+      "maximum_normalized_feature_change": 0.0,
+      "normalized": {
+        "correct": 113,
+        "accuracy": 0.9576271186440678,
+        "prediction_consistency": 1.0
+      },
+      "pixel_baseline": {
+        "correct": 115,
+        "accuracy": 0.9745762711864406,
+        "prediction_consistency": 1.0
+      }
+    },
+    {
+      "name": "shift_right_down",
+      "scale": 1.0,
+      "offset": [
+        400,
+        250
+      ],
+      "maximum_normalized_feature_change": 0.0,
+      "normalized": {
+        "correct": 113,
+        "accuracy": 0.9576271186440678,
+        "prediction_consistency": 1.0
+      },
+      "pixel_baseline": {
+        "correct": 8,
+        "accuracy": 0.06779661016949153,
+        "prediction_consistency": 0.06779661016949153
+      }
+    },
+    {
+      "name": "shift_left_up",
+      "scale": 1.0,
+      "offset": [
+        -250,
+        -150
+      ],
+      "maximum_normalized_feature_change": 0.0,
+      "normalized": {
+        "correct": 113,
+        "accuracy": 0.9576271186440678,
+        "prediction_consistency": 1.0
+      },
+      "pixel_baseline": {
+        "correct": 26,
+        "accuracy": 0.22033898305084745,
+        "prediction_consistency": 0.2288135593220339
+      }
+    },
+    {
+      "name": "half_size_shifted",
+      "scale": 0.5,
+      "offset": [
+        500,
+        300
+      ],
+      "maximum_normalized_feature_change": 0.0,
+      "normalized": {
+        "correct": 113,
+        "accuracy": 0.9576271186440678,
+        "prediction_consistency": 1.0
+      },
+      "pixel_baseline": {
+        "correct": 33,
+        "accuracy": 0.2796610169491525,
+        "prediction_consistency": 0.288135593220339
+      }
+    },
+    {
+      "name": "larger_shifted",
+      "scale": 1.6,
+      "offset": [
+        -300,
+        100
+      ],
+      "maximum_normalized_feature_change": 1.1723955140041653e-13,
+      "normalized": {
+        "correct": 113,
+        "accuracy": 0.9576271186440678,
+        "prediction_consistency": 1.0
+      },
+      "pixel_baseline": {
+        "correct": 16,
+        "accuracy": 0.13559322033898305,
+        "prediction_consistency": 0.1440677966101695
+      }
+    },
+    {
+      "name": "double_size",
+      "scale": 2.0,
+      "offset": [
+        0,
+        0
+      ],
+      "maximum_normalized_feature_change": 0.0,
+      "normalized": {
+        "correct": 113,
+        "accuracy": 0.9576271186440678,
+        "prediction_consistency": 1.0
+      },
+      "pixel_baseline": {
+        "correct": 7,
+        "accuracy": 0.059322033898305086,
+        "prediction_consistency": 0.059322033898305086
+      }
+    }
+  ]
+}
